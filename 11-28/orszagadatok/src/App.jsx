@@ -4,7 +4,7 @@ import Orszagadat from "./components/Orszagadat"
 
 function App() {
   const [countries, setCountries] = useState([])
-  let backendUrl = "https://restcountries.com/v3.1/alpha/hu"
+  const backendUrl = "https://restcountries.com/v3.1/alpha/hu"
  
   useEffect(() => {
     const OrszagokBetoltese = async () => {
@@ -29,6 +29,14 @@ function App() {
           currencies={country.currencies ? Object.values(country.currencies)[0] : {symbol: "N/A"}}
           capital={country.capital}
           borders={country.borders ? country.borders.join(", ") : "Nincs határos ország"}
+          flag={country.flag}
+          flags={country.flags}
+          population={country.population}
+          maps={country.maps}
+          continents={country.continents}
+          timezones={country.timezones}
+          car={country.car}
+          coatOfArms={country.coatOfArms}
         />
       ))}
     </>
