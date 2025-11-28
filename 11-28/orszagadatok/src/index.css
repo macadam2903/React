@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.orszagadat {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  margin: 25px auto;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.orszagadat h2 {
+  color: #009b22;
+  font-size: 1.6rem;
+  margin-bottom: px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #667eea;
+}
+
+.orszagadat p {
+  color: #555;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.orszagadat p strong {
+  color: #0225be;
+  font-weight: 600;
+}
+

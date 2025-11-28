@@ -1,0 +1,22 @@
+.felhasznalo-kartya {
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  max-width: 300px;
+  margin: 20px;
+  box-shadow: 0 2px 4px rgba(226, 218, 218, 0.1);
+  float: left;
+  text-align: left;
+}
+ 
+.felhasznalo-kartya img {
+  width: 50%;
+  border-radius: 16px;
+}
+ 
+.felhasznalo-adatai {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
