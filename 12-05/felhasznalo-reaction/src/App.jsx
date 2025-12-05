@@ -1,10 +1,13 @@
 import './App.css'
 import React, { useEffect, useState } from 'react';
 
-//A https://randomuser.me/api/?results=10 végpontról jövő adatokból hozz létre személyenként egy kártyát. 
-//Jelenítsd meg a képet, nevet és tedd lehetővé, hogy a kártya alján like és dislike gombok segítségével szavazni lehessen. 
-//A like-ra kattintva eggyel nőjön a szavazat, dislike esetén csökkenjen a szavazat, amely jelenjen is meg az adott kártyán.
 
+const cardStyle = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'space-around',
+  padding: '20px',
+};
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -26,7 +29,7 @@ function App() {
   };
 
   return (
-    <>
+    <div style={cardStyle}>
       {users.map((user, index) => (
         <div key={index} className="card">
           <img src={user.picture.large} alt={user.name.first} />
@@ -36,7 +39,7 @@ function App() {
           <button onClick={() => handleVote(index, 'dislike')}>Dislike</button>
         </div>
       ))}
-    </>
+    </div>
   );
 }
 
