@@ -21,8 +21,8 @@ Védett oldal: Csak "bejelentkezve" látható, egyébként átirányit.
 
 3. Technikai követelmények
 A megoldás során az alábbi eszközöket kell kötelezően használnod:
-- <BrowserRouter>, <Routes>, <Route>: Az alapvető struktúrához.
-- <NavLink>: A menüpontokhoz (használd az aktív állapot stílusozását!).
+- `<BrowserRouter>`, `<Routes>`, `<Route>`: Az alapvető struktúrához.
+- `<NavLink>`: A menüpontokhoz (használd az aktív állapot stílusozását!).
 - useParams: A recept részletes nézeténél az ID kinyeréséhez.
 - useNavigate: Egy „Vissza a listához" gomb megvalósításához a részletek oldalon.
 - useSearchParams: A keresőoldalon a szűrési feltételek kezeléséhez.
@@ -30,10 +30,10 @@ A megoldás során az alábbi eszközöket kell kötelezően használnod:
 
 4. Segédadatok (Mock Data)
 Használd az alábbi adatstruktúrát a receptek.js fájlodban vagy a fő komponensedben:
-const receptek = [
-{id: '1', nev: "Bolognai spagetti', kateg: 'Olasz', leiras: 'Főzd ki a tésztát...)
-{id: '2', nev: 'Gulyásleves', kateg: 'Magyar', leiras: 'Piritsd meg a hagymát...'),
-[id: '3', nev: "Sushi tál, kateg: 'Japán', leiras: 'Használj friss halat...'
+const receptek = 
+`{id: '1', nev: "Bolognai spagetti', kateg: 'Olasz', leiras: 'Főzd ki a tésztát...)`
+`{id: '2', nev: 'Gulyásleves', kateg: 'Magyar', leiras: 'Piritsd meg a hagymát...')`,
+`{id: '3', nev: "Sushi tál, kateg: 'Japán', leiras: 'Használj friss halat...}`'
 
 5. Beadási feltételek
 Az alkalmazás legyen reszponziv (alapszintű CSS).
