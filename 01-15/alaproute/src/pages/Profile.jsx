@@ -1,0 +1,9 @@
+const Profile = () => {
+    return (
+        <div>
+            <h1>Profile Page</h1>
+            <p>This is the profile page. Only logged-in users can see this.</p>
+        </div>
+    );
+}
+export default Profile;
