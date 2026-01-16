@@ -1,27 +1,28 @@
 import { createContext, useState, useContext } from "react";
- 
-const AuthContext = createContext();
- 
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
- 
-  const login = (userName) => {
-    // In a real application, you would handle authentication here
-    setUser({ name: userName });
-  };
- 
-  const logout = () => {
-    setUser(null);
-  };
- 
-  return (
-    <AuthContext.Provider value={{ user, login, logout }}>
-      {children}
-    </AuthContext.Provider>
-  );
-};
- 
-// eslint-disable-next-line react-refresh/only-export-components
+
+export const AuthContext = createContext();
+
+export const AuthProvider = ({ children  }) => {
+    {/* itt kezeljük a hitelesítési állapotot
+        az ebben lévő felhasználói adatokat és metódusokat
+        akarjuk átadni a komponenseknek */}
+    const [user, setUser] = useState(null);
+
+    const login = (username, email, role) => {
+        // jogosultság ellenőrzés itt és csak azután állítjuk be a user-t
+        setUser({ name: username, email: email, role: role });
+    };
+
+    const logout = () => {
+        setUser(null);
+    };
+
+    return (
+        <AuthContext.Provider value={{ user, login, logout }}>
+            {children}
+        </AuthContext.Provider>
+    );
+}
 export function useAuth() {
-  return useContext(AuthContext);
+    return useContext(AuthContext);
 }
