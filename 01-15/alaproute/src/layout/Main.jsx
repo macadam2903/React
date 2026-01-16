@@ -5,9 +5,11 @@ import Contact from '../pages/Contact.jsx'
 import Profile from '../pages/Profile.jsx'
 import Login from '../pages/Login.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
+import { useNavigate } from 'react-router-dom'
 
 const Main = () => {
     const { user} = useAuth();
+    const navigate = useNavigate();
     return (
         <main>
             <Routes>
@@ -20,7 +22,7 @@ const Main = () => {
                         <Route path="/logout" element={<Home />} />
                     </>
                 ) : (
-                    <Route path="/login" element={<Login />} />
+                    <Route path="/login" element={<Login navigate={navigate} />} />
                 )}
                 <Route path="*" element={<h1>404 Not Found</h1>} />
             </Routes>

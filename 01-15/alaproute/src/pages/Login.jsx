@@ -1,7 +1,10 @@
 import { useAuth } from "../context/AuthContext";   
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     const { login } = useAuth();
+    const navigate = useNavigate();
+
     const handleLogin = () => {
         // Például statikus adatokkal
         login('demoUser', 'demo@example.com', 'user');

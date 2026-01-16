@@ -8,6 +8,7 @@ export const AuthProvider = ({ children  }) => {
         akarjuk átadni a komponenseknek */}
     const [user, setUser] = useState(null);
 
+    
     const login = (username, email, role) => {
         // jogosultság ellenőrzés itt és csak azután állítjuk be a user-t
         setUser({ name: username, email: email, role: role });
@@ -15,6 +16,7 @@ export const AuthProvider = ({ children  }) => {
 
     const logout = () => {
         setUser(null);
+        
     };
 
     return (
